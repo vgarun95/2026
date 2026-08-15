@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Linux process states</title>
+  <desc id="desc">Diagram showing the main Linux process states: running, runnable, sleeping, stopped, zombie, and exit.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px Arial, sans-serif; fill: #111827; }
+      .label { font: 600 20px Arial, sans-serif; fill: #1f2937; }
+      .small { font: 16px Arial, sans-serif; fill: #374151; }
+      .box { fill: #dbeafe; stroke: #3b82f6; stroke-width: 3; rx: 18; }
+      .warning { fill: #fef3c7; stroke: #f59e0b; stroke-width: 3; rx: 18; }
+      .danger { fill: #fee2e2; stroke: #ef4444; stroke-width: 3; rx: 18; }
+      .arrow { stroke: #475569; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="700"/>
+  <text x="600" y="58" text-anchor="middle" class="title">Linux Process States</text>
+
+  <rect class="box" x="80" y="120" width="220" height="100" rx="18"/>
+  <text x="190" y="170" text-anchor="middle" class="label">Running</text>
+  <text x="190" y="196" text-anchor="middle" class="small">executing on CPU</text>
+
+  <rect class="box" x="360" y="120" width="220" height="100" rx="18"/>
+  <text x="470" y="170" text-anchor="middle" class="label">Runnable</text>
+  <text x="470" y="196" text-anchor="middle" class="small">ready to run</text>
+
+  <rect class="box" x="640" y="120" width="220" height="100" rx="18"/>
+  <text x="750" y="170" text-anchor="middle" class="label">Sleeping</text>
+  <text x="750" y="196" text-anchor="middle" class="small">waiting on I/O</text>
+
+  <rect class="box" x="920" y="120" width="220" height="100" rx="18"/>
+  <text x="1030" y="170" text-anchor="middle" class="label">Stopped</text>
+  <text x="1030" y="196" text-anchor="middle" class="small">paused by signal</text>
+
+  <rect class="warning" x="360" y="360" width="220" height="100" rx="18"/>
+  <text x="470" y="410" text-anchor="middle" class="label">Zombie</text>
+  <text x="470" y="436" text-anchor="middle" class="small">exited, parent has not reaped it</text>
+
+  <rect class="danger" x="680" y="360" width="220" height="100" rx="18"/>
+  <text x="790" y="410" text-anchor="middle" class="label">Dead</text>
+  <text x="790" y="436" text-anchor="middle" class="small">process is gone</text>
+
+  <path class="arrow" d="M 300 170 L 360 170"/>
+  <path class="arrow" d="M 580 170 L 640 170"/>
+  <path class="arrow" d="M 860 170 L 920 170"/>
+
+  <path class="arrow" d="M 470 220 L 470 360"/>
+  <path class="arrow" d="M 790 220 L 790 360"/>
+  <path class="arrow" d="M 610 410 L 680 410"/>
+
+  <text x="318" y="156" class="small">schedule</text>
+  <text x="596" y="156" class="small">block</text>
+  <text x="878" y="156" class="small">signal</text>
+  <text x="485" y="300" class="small">exit</text>
+  <text x="806" y="300" class="small">cleanup</text>
+  <text x="630" y="400" class="small">reaped</text>
+</svg>
