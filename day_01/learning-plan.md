@@ -44,6 +44,9 @@
 * **Kubernetes Orchestration:** Pods, Deployments, Services, Ingress controllers, Helm charts, and storage management.
 * **Observability & Portfolio Project:** Monitoring with Prometheus/Grafana, centralizing logs, and publishing a production-ready Capstone project.
 
+  <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/6d2bc486-58ff-4b59-a344-690136cc6680" />
+
+
 ---
 
 ## 4. Consistency Strategy & Ownership
