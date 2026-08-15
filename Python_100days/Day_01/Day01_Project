@@ -1,0 +1,4 @@
+print("Weclome to my python programming trailing")
+city = input("which city did you born?")
+animal = input("what is your favorite animal?")
+print("what is company name"+ " " + city + " " + animal)
